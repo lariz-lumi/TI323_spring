@@ -19,4 +19,14 @@ public class OlaController {
     public String getPorNome(@PathVariable String nome){
         return "ola, Sr(a) " + nome + "!";
     }
+
+    @RequestMapping(value = "/search", method = RequestMethod.GET, params = {"name"})
+    public String searchUserByName(@RequestParam("name") String name){
+        return "Searching for user with name: " + name;
+    }
+
+    @RequestMapping(value = "/pesquisa", method = RequestMethod.GET, params = {"name"})
+    public String searchUserByName2(@RequestParam("name") String name){
+        return "Voce é foda e joga muito bem " + name;
+    }
 }
