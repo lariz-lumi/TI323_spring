@@ -16,7 +16,7 @@ public class OlaController {
     }
      
     @GetMapping("/ola/{nome}")
-    public String getPorNome(@PathVariable String param){
-        return "ola, Sr(a) " + param + "!";
+    public String getPorNome(@PathVariable String nome){
+        return "ola, Sr(a) " + nome + "!";
     }
 }
